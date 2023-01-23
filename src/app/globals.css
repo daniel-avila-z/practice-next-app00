@@ -78,15 +78,14 @@
   box-sizing: border-box;
 }
 
-html,
+html{
+  padding: 20px;
+}
 body {
   margin: 0 auto;
-  padding: 100px;
+  padding: 20px;
   max-width: 800vw;
-  overflow-x: hidden;
-}
-
-body {
+  overflow-x: hidden;  
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
@@ -95,6 +94,10 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+/* 
+body {
+
+} */
 
 a {
   font-weight: bold;

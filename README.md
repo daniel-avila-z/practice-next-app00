@@ -1,3 +1,36 @@
+
+
+# Mis notas sobre Next.js 13
+
+~Los componentes de Next.js 13 dentro de la carpeta app, son por defecto siempre ejecutados  en el servidor.
+
+~Sí necesitamos crear un componente que tenga interactividad, que necesite estado, que funcionen con un HOOK como UseState, UseEfect, UseReducer o sí se necesitamos acceder a la API del navegador; En la primera línea de codigo del archivo debemos poner el string 'use client', así indicamos que el componente necesita usar el lado del cliente (Hidratación).
+
+
+## 'use client'
+
+```javascript
+'use client'
+import { useState } from 'react'
+
+export function LikeButton () {
+  const [Liked, setLiked] = useState(false)
+  return (
+    <button onClick={() => setLiked(!Liked)}>
+      {Liked ? '💚' : '🤍'}
+    </button>
+  )
+}
+```
+
+
+## Documentation
+[React-Wiki de Midudev](https://github.com/midudev/preguntas-entrevista-react)
+
+[Video Next.js 13 de Midudev](https://youtu.be/tA-_vAz9y78)
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
